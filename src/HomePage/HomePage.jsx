@@ -17,8 +17,8 @@ class HomePage extends React.Component {
         const { user, users } = this.props;
         return (
             <div>
-                <h1 class="text-center text-info">Welcome {user.firstName}!</h1>
-                <p class="text-center">This is a React + Redux Challenge</p>
+                <h1 className="text-center text-info">Welcome {user.firstName}!</h1>
+                <p className="text-center">This is a React + Redux Challenge</p>
                 <h3>All users:</h3>
                 {users.loading && <em>Loading...</em>}
                 {users.error && <span className="text-danger">ERROR: {users.error}</span>}
@@ -30,14 +30,14 @@ class HomePage extends React.Component {
                                 {
                                     user.deleting ? <em> - Deleting...</em>
                                     : user.deleteError ? <span className="text-danger"> - ERROR: {user.deleteError}</span>
-                                    : <span> - <a class="text-danger" onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
+                                    : <span> - <a className="text-danger" onClick={this.handleDeleteUser(user.id)}>Delete</a></span>
                                 }
                             </li>
                         )}
                     </ul>
                 }
-                <p class="text-right">
-                    <Link to="/login"  class="btn btn-secondary" >Logout</Link>
+                <p className="text-right">
+                    <Link to="/login"  className="btn btn-secondary" >Logout</Link>
                 </p>
             </div>
         );
